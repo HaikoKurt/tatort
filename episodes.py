@@ -1,4 +1,3 @@
-from encodings import utf_8
 import http.client
 import re
 
