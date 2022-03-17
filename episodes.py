@@ -3,7 +3,7 @@ import http.client
 import re
 
 class Episodes :
-    EPISODE_PATTERN = "(?s)\s*<td>(\d+)\s*<.*?title.*?>(.*?)<.*?"
+    EPISODE_PATTERN = "(?s)\s*<td>(\d+)\s*<.*?title.*?>(.*?)[<&].*?"
     EPISODE_EXP = re.compile(EPISODE_PATTERN)
     TR_PATTERN = "(?si)<tr>(.*?)</tr>"
     TR_EXP = re.compile(TR_PATTERN)
