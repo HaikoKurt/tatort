@@ -51,7 +51,11 @@ class Episodes :
         return string.upper()
 
     def file_title(self, episode) :
-        return self.episodes[episode].replace("!", "")
+        to_strip = ['!', '?', '’', '–', '\'', ',']
+        title = self.episodes[episode]
+        for strip in to_strip :
+            title = title.replace(strip, "")
+        return title
 
     def find(self, filename: str) :
         norm_filename = self.__normalize(filename)
