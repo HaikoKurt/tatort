@@ -27,26 +27,31 @@ class Episodes :
         for episode in self.episodes :
             print(f"{episode} = {self.episodes[episode]}")
 
-    NORMALIZE = [
-        (b'u\xcc\x88'.decode("utf-8"), "ue"),
-        ('ü', "ue"),
-        (b'o\xcc\x88'.decode("utf-8"), "oe"),
-        ('ö', "oe"),
-        (b'a\xcc\x88'.decode("utf-8"), "ae"),
-        ('ä', "ae"),
-        ('!', ""),
-        ('ß', "ss"),
-        (b'A\xcc\x88'.decode("utf-8"), "Ae"),
-        ('Ä', "Ae"),
-        (b'U\xcc\x88'.decode("utf-8"), "Ue"),
-        ('Ü', "Ue"),
-        (b'O\xcc\x88'.decode("utf-8"), "Oe"),
-        ('Ö', "Oe"),
-        (" ", "_")
-    ]
-
     def __normalize(self, string : str) :
-        for replacement in self.NORMALIZE :
+        replacements = [
+            (b'u\xcc\x88'.decode("utf-8"), "ue"),
+            ('ü', "ue"),
+            (b'o\xcc\x88'.decode("utf-8"), "oe"),
+            ('ö', "oe"),
+            (b'a\xcc\x88'.decode("utf-8"), "ae"),
+            ('ä', "ae"),
+            ('!', ""),
+            ('?', ""),
+            ('ß', "ss"),
+            (b'A\xcc\x88'.decode("utf-8"), "Ae"),
+            ('Ä', "Ae"),
+            (b'U\xcc\x88'.decode("utf-8"), "Ue"),
+            ('Ü', "Ue"),
+            (b'O\xcc\x88'.decode("utf-8"), "Oe"),
+            ('Ö', "Oe"),
+            (" ", "_"),
+            ("â", "a"),
+            ("'", "_"),
+            ("’", "_"),
+            (",", ""),
+            ("_–_", "_") # Blank has been changed before
+        ]
+        for replacement in replacements :
             string = string.replace(replacement[0], replacement[1])
         return string.upper()
 
@@ -66,16 +71,16 @@ class Episodes :
         return None
 
 if __name__ == "__main__" :
-    '''
-    filenames = [
-        "Tatort_Schimanski___restauriert_in_HD-Katjas_Schweigen_(1989)-2096889429.mp4",
-        "Tatort-Alle_meine_Jungs-0248914024.mp4",
-        "Tatort-Auf_ewig_Dein_(2014)-0369481507.txt",
-        "0209_Einzelhaft_(1988)-2092373979.txt"
-    ]
+    dump = True
     e = Episodes()
-    for filename in filenames :
-        print(f"{filename} -> {e.find(filename)}")
-    '''
-    e = Episodes()
-    e.dump()
+    if not dump : # -> Test
+        filenames = [
+            "Tatort_Schimanski___restauriert_in_HD-Katjas_Schweigen_(1989)-2096889429.mp4",
+            "Tatort-Alle_meine_Jungs-0248914024.mp4",
+            "Tatort-Auf_ewig_Dein_(2014)-0369481507.txt",
+            "0209_Einzelhaft_(1988)-2092373979.txt"
+        ]
+        for filename in filenames :
+            print(f"{filename} -> {e.find(filename)}")
+    else :
+        e.dump()
