@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke ;
+    font-size: medium;
+}
+
+table {
+    border-width: 0px;
+    clear: both;
+    margin: 20px 0px;
+}
+
+th {
+    background-color: cornflowerblue;
+    padding: 3px 6px;
+    color: gainsboro;
+}
+
+td.day {
+    min-width: 150px ;
+}
+
+td.hour {
+    min-width: 25px ;
+    text-align: center;
+}
+
+td.hour-motion {
+    min-width: 25px ;
+    background-color: lightgreen;
+    text-align: center;
+}
+
+td.hour-reported {
+    min-width: 25px ;
+    background-color: lightsalmon;
+    text-align: center;
+}
+
+td {
+    background-color: gainsboro;
+    padding: 3px 6px;
+}
+
+td.on {
+    background-color: lightgreen;
+    font-weight: bold;
+}
+
+td.reported {
+    background-color: lightsalmon;
+    font-weight: bold;
+}
+
+td.button {
+    background-color: #C8C8C8;
+}
+
+.button {
+    font-size: medium;
+    text-decoration: underline;
+    border: 0px;
+    background-color: #C8C8C8;
+    margin: 2px;
+    padding: 3px 6px;
+    float: left;
+}
+
+select {
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+input.selection {
+    font-size: medium;
+    text-decoration: underline;
+    border: 0px;
+    margin: 0px;
+    padding: 0px 0px 0px 10px ;
+    background-color: #C8C8C8;
+}
+
+.button:hover .selection:hover {
+    color: dimgray;
+}
+
+div.button {
+    float: left;
+}
+
+div.tab {
+    font-size: x-large;
+    background-color: #C8C8C8;
+    margin: 2px 2px 10px 2px;
+    max-width: 250px;
+    padding: 3px 6px;
+    float: left;
+}
+
+div.tabon {
+    font-size: x-large;
+    font-weight: bold;
+    background-color: lightgreen;
+    margin: 2px 2px 10px 2px;
+    max-width: 250px;
+    padding: 3px 6px;
+    float: left;
+}
+
+form {
+    font-size: medium;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: dimgray;
+}

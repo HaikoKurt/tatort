@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  messenger:
+    image: followme.echo:0.8
+    build: .
+    ports:
+      - "10000:10000"
+    volumes:
+      - /Users/haiko/Documents/Temp/Docker:/data

@@ -1,0 +1,4 @@
+requests
+flask
+mysql-connector-python
+gunicorn

@@ -1,0 +1,57 @@
+{
+    "version": 1,
+    "disable_existing_loggers": false,
+    "formatters": {
+        "standard": {
+            "format": "[%(asctime)s] (%(levelname)s) in %(module)s: %(message)s"
+        }
+    }, 
+    "handlers": {
+        "console": {
+            "formatter": "standard",
+            "class": "logging.StreamHandler",
+            "stream": "ext://sys.stdout"
+        },
+        "errorlog" : {
+            "formatter": "standard",
+            "class": "logging.handlers.TimedRotatingFileHandler",
+            "filename": "/data/xxx-error.log",
+            "when": "midnight",
+            "encoding": "UTF-8",
+            "delay": true
+        },
+        "accesslog" : {
+            "formatter": "standard",
+            "class": "logging.handlers.TimedRotatingFileHandler",
+            "filename": "/data/xxx-access.log",
+            "when": "midnight",
+            "encoding": "UTF-8",
+            "delay": true
+        },
+        "applog" : {
+            "formatter": "standard",
+            "class": "logging.handlers.TimedRotatingFileHandler",
+            "filename": "/data/xxx.log",
+            "when": "midnight",
+            "encoding": "UTF-8",
+            "delay": true
+        }
+    },
+    "loggers": {
+        "root": {
+            "handlers": ["console", "applog"], 
+            "level": "INFO", 
+            "propagate": false
+        },
+        "gunicorn.access": {
+            "handlers": ["console", "accesslog"],
+            "level": "INFO",
+            "propagate": false
+        },
+        "gunicorn.error": {
+            "handlers": ["console", "errorlog"],
+            "level": "WARNING",
+            "propagate": false
+        }
+    }
+}
