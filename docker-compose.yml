@@ -1,10 +1,11 @@
 version: '3'
 
 services:
-  messenger:
-    image: followme.echo:0.8
+  renamer:
+    image: tatort.renamer:0.8
     build: .
     ports:
-      - "10000:10000"
+      - "10200:10000"
     volumes:
-      - /Users/haiko/Documents/Temp/Docker:/data
+      - /Users/haiko/Documents/Temp/Docker/tatort:/source
+      - /Users/haiko/Documents/Temp/tatort:/destination

@@ -1,3 +1,4 @@
+watchdog
 requests
 flask
 mysql-connector-python

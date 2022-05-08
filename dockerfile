@@ -9,8 +9,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY src .
 
 EXPOSE 10000
-VOLUME [ "/data" ]
+VOLUME [ "/source" ]
+VOLUME [ "/destination" ]
 
 ENV FLASK_ENV=production
 
-CMD [ "gunicorn" ]
+CMD [ "python", "./watchit.py" ]

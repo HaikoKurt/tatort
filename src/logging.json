@@ -15,7 +15,7 @@
         "errorlog" : {
             "formatter": "standard",
             "class": "logging.handlers.TimedRotatingFileHandler",
-            "filename": "/data/xxx-error.log",
+            "filename": "/source/logs/tatort-error.log",
             "when": "midnight",
             "encoding": "UTF-8",
             "delay": true
@@ -23,7 +23,7 @@
         "accesslog" : {
             "formatter": "standard",
             "class": "logging.handlers.TimedRotatingFileHandler",
-            "filename": "/data/xxx-access.log",
+            "filename": "/source/logs/tatort-access.log",
             "when": "midnight",
             "encoding": "UTF-8",
             "delay": true
@@ -31,7 +31,7 @@
         "applog" : {
             "formatter": "standard",
             "class": "logging.handlers.TimedRotatingFileHandler",
-            "filename": "/data/xxx.log",
+            "filename": "/source/logs/tatort.log",
             "when": "midnight",
             "encoding": "UTF-8",
             "delay": true
