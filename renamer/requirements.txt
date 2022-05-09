@@ -1,2 +1,1 @@
-watchdog
 mysql-connector-python
