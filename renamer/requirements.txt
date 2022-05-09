@@ -1,0 +1,2 @@
+watchdog
+mysql-connector-python

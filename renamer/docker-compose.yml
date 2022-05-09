@@ -4,8 +4,6 @@ services:
   renamer:
     image: tatort.renamer:0.8
     build: .
-    ports:
-      - "10200:10000"
     volumes:
       - /Users/haiko/Documents/Temp/Docker/tatort:/source
       - /Users/haiko/Documents/Temp/tatort:/destination

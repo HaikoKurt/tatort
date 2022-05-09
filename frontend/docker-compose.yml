@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  frontend:
+    image: tatort.frontend:0.8
+    build: .
+    ports:
+      - "10200:10000"
+    volumes:
+      - /Users/haiko/Documents/Temp/Docker/tatort:/logs

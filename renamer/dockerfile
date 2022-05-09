@@ -8,10 +8,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY src .
 
-EXPOSE 10000
 VOLUME [ "/source" ]
 VOLUME [ "/destination" ]
-
-ENV FLASK_ENV=production
 
 CMD [ "python", "./watchit.py" ]
