@@ -16,7 +16,7 @@ class Watchfolder :
     def __wait_and_execute(self, f) :
         self.logger.info(f"waiting for {f.name}")
         source = f"{f.parent}/{f.name}"
-        size = 0
+        size = -1
         while size < os.path.getsize(source) :
             size = os.path.getsize(source)
             self.logger.debug(f"{f.name} size: {size}")
