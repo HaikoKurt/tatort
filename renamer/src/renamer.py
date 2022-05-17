@@ -43,15 +43,16 @@ if __name__ == "__main__" :
         "Tatort-Amour_fou-1538445053.mp4",
         "Tatort-Für_immer_und_dich-0827701224.txt",
         "Tatort-Tatort__Der_irre_Iwan-1173230014.mp4",
-        "Tatort-Erntedank_e.V.-1671880365.mp4",     # wird nicht gefunden, da titel aus Wikipedia nicht mit Mediathek übereinstimmt
         "Tatort-Tatort__Saarbrücken_an_einem_Montag-1211983919.mp4",
         "Tatort-Tatort__Chateau_Mort-0048477545.txt",
         "Tatort-Die_Blume_des_Bösen_(2007)-1873218538.txt",
-        "Tatort-In_der_Familie_2-1394444053.txt",   # siehe oben
         "Tatort-Mord_Ex_Machina-1016382991.txt",
         "Tatort_Schimanski___restauriert_in_HD-Freunde_(1986)-0668847862.txt",
         "Tatort-Tatort__Mia_san_jetz_da_wo's_weh_tut-1760368132.txt",
         "Tatort-Der_Tod_der_anderen_(2021)-0912978069.txt",
+        "Tatort-Erntedank_e.V.-1671880365.mp4",     # wird nicht gefunden, da Titel aus Wikipedia nicht mit Mediathek übereinstimmt
+        "Tatort-In_der_Familie_2-1394444053.txt",   # siehe oben
+        "Ratort-Söhne_und_Väter-1549986488.txt",    # wird nicht gefunden, da der Dateiname nicht mit 'Tatort' beginnt
         ]
     renamer = Renamer()
     for old_name in names :

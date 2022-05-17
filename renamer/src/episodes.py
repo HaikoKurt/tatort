@@ -62,22 +62,23 @@ class Episodes :
         return title
 
     def find(self, filename: str) :
-        norm_filename = self.__normalize(filename)
-        for episode in self.episodes :
-            norm_episode = self.__normalize(self.episodes[episode])
-            if norm_filename.find(norm_episode) >= 0 :
-                return episode
+        if filename.startswith("Tatort") :
+            norm_filename = self.__normalize(filename)
+            for episode in self.episodes :
+                norm_episode = self.__normalize(self.episodes[episode])
+                if norm_filename.find(norm_episode) >= 0 :
+                    return episode
         return None
 
 if __name__ == "__main__" :
-    dump = True
+    dump = False
     e = Episodes()
     if not dump : # -> Test
         filenames = [
             "Tatort_Schimanski___restauriert_in_HD-Katjas_Schweigen_(1989)-2096889429.mp4",
             "Tatort-Alle_meine_Jungs-0248914024.mp4",
             "Tatort-Auf_ewig_Dein_(2014)-0369481507.txt",
-            "0209_Einzelhaft_(1988)-2092373979.txt"
+            "0209_Einzelhaft_(1988)-2092373979.txt"     # wird nicht gefunden, da der Dateiname nicht mit 'Tatort' beginnt
         ]
         for filename in filenames :
             print(f"{filename} -> {e.find(filename)}")
