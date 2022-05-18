@@ -15,10 +15,7 @@ renamer = Renamer()
 logger = logging.getLogger(__name__)
 
 def move(source, dest) :
-    try :
-        os.makedirs(os.path.dirname(dest))
-    except :
-        pass
+    os.makedirs(os.path.dirname(dest), exist_ok=True)
     shutil.move(source, dest)
     logger.info(f"{source} -> {dest}")
 
