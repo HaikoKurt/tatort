@@ -2,8 +2,8 @@ version: '3'
 
 services:
   renamer:
-    image: tatort.renamer:0.9
+    image: tatort.renamer:0.91
     build: .
     volumes:
-      - /Users/haiko/Documents/Temp/Docker/tatort:/source
-      - /Users/haiko/Documents/Temp/tatort:/destination
+      - /Users/haiko/Documents/Temp/Docker/tatort/source:/source
+      - /Users/haiko/Documents/Temp/Docker/tatort/destination:/destination
