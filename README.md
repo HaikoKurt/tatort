@@ -35,7 +35,7 @@ Das bedeutet, dass nach einer Umbenennung immer noch einmal manuell kontrolliert
 
 1. Zusätzliche Informationen aus dem Dateinamen verwenden um die Zuordnung zu verbessern.
 1. Informationen aus dem Docker-Backend in eine Datenbank schreiben und in einem Docker-Web-Frontend anzeigen.
-1. Konfigurationsmöglichkeiten über das Docker Fromntend anbieten (z.B. die Tabelle mit den Tatort-Reihennummern (`SEASONS` in `Renamer`), welche jedes Jahr ergänzt werden muss.)
+1. Konfigurationsmöglichkeiten über das Docker Frontend anbieten (z.B. die Tabelle mit den Tatort-Reihennummern (`SEASONS` in `Renamer`), welche jedes Jahr ergänzt werden muss.) oder die Tabelle automatisch aus den Informationen auf Wikipedia erzeugen (geht das?)
 1. In der Episodentabelle die doppelten Titel gänzlich entfernen, sodass Tatorte mit den Zwillingstiteln nach Unbekannt (`unknown`) verschoben werden (Bekanntes Problem 1).
 1. Falls eine Folge geladen wird und diese bereits existiert, prüfen, ob die Mediendatei größer ist (bessere Qualität) und dann ersetzen.
 
