@@ -8,7 +8,7 @@ class Renamer :
     # List of season tuples. The first entry in the tuple is the first episode number (based on total
     # ordering: https://de.wikipedia.org/wiki/Liste_der_Tatort-Folgen). Make sure this list is sorted
     # descending by episode number
-    SEASONS = sorted([(1220, '2023'), (1184, '2022'), (1151, '2021'), (1115, '2020'), (1078, '2019'),
+    SEASONS = sorted([(1255, '2024'), (1220, '2023'), (1184, '2022'), (1151, '2021'), (1115, '2020'), (1078, '2019'),
                       (1041, '2018'), (1006, '2017'), (969, '2016'), (929, '2015'), (893, '2014'),
                       (857, '2013'), (822, '2012'), (786, '2011'), (751, '2010'), (717, '2009'),
                       (686, '2008'), (651, '2007'), (619, '2006'), (584, '2005'), (554, '2004'),
